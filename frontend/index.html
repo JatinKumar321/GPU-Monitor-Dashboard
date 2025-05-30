@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>System Monitor Dashboard</h1>
+        <nav>
+            <button id="btn-overview" class="nav-button">Overview</button>
+            <button id="btn-cpu" class="nav-button">CPU Info</button>
+            <button id="btn-gpu" class="nav-button">GPU Info</button>
+            <button id="btn-ram-disk" class="nav-button">RAM & Disk</button>
+            <button id="btn-lxc" class="nav-button">LXC Containers</button>
+            <button id="btn-live-stats" class="nav-button">Live Stats</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview-section" class="content-section">
+            <h2>Overview</h2>
+            <div id="overview-content">
+                <div id="overview-cpu"><h3>CPU</h3><pre>Loading CPU data...</pre></div>
+                <div id="overview-ram"><h3>RAM</h3><pre>Loading RAM data...</pre></div>
+                <div id="overview-disk"><h3>Disk</h3><pre>Loading Disk data...</pre></div>
+            </div>
+        </section>
+
+        <section id="cpu-section" class="content-section" style="display:none;">
+            <h2>CPU Information</h2>
+            <pre id="cpu-info">Loading CPU data...</pre>
+        </section>
+
+        <section id="gpu-section" class="content-section" style="display:none;">
+            <h2>GPU Information</h2>
+            <pre id="gpu-info">Loading GPU data...</pre>
+        </section>
+
+        <section id="ram-disk-section" class="content-section" style="display:none;">
+            <h2>RAM & Disk Information</h2>
+            <h3>RAM</h3>
+            <pre id="ram-info">Loading RAM data...</pre>
+            <h3>Disk</h3>
+            <pre id="disk-info">Loading Disk data...</pre>
+        </section>
+
+        <section id="lxc-section" class="content-section" style="display:none;">
+            <h2>LXC Container Information</h2>
+            <div id="lxc-data">
+                <!-- LXC data will be populated here by script.js -->
+                <p>Loading LXC data...</p>
+            </div>
+        </section>
+
+        <section id="live-stats-section" class="content-section" style="display:none;">
+            <h2>Live System Stats (top/htop like)</h2>
+            <pre id="live-stats-display">Loading live stats...</pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dashboard loaded at: <span id="timestamp"></span></p>
+        <button id="btn-refresh-all">Refresh All Data</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
