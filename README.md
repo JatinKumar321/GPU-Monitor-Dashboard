@@ -110,17 +110,3 @@ The backend exposes the following API endpoints:
     *   Ensure you have the latest NVIDIA drivers installed on your Windows host.
     *   Install the NVIDIA CUDA Toolkit *inside* your WSL 2 distribution. Follow NVIDIA's official documentation for this. This will make `nvidia-smi` available within WSL.
 
-## Potential Future Enhancements
-
-*   Graphical data representations (charts, graphs).
-*   User authentication for accessing the dashboard.
-*   Configuration file for command paths and options.
-*   More robust error handling and logging.
-*   Real-time updates using WebSockets instead of polling.
-*   Historical data logging and trend analysis.
-*   Customizable refresh intervals.
-*   Dockerization for easier deployment.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
